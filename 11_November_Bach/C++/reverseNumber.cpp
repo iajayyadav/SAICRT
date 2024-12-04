@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int reverse(int a){
+    int sum=0,b;
+    while(a!=0){
+       b=a%10;
+       sum=(sum*10)+b;
+       a=a/10;
+    }
+    return sum;
+}
+int main(){
+    int a , ans;
+    cin>>a;
+    ans = reverse(a);
+    cout<<ans;
+    return 0;
+}
