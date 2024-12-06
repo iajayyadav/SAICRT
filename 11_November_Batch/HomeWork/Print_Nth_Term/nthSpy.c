@@ -1,33 +1,33 @@
 #include <stdio.h>
 #include <math.h>
-int isPrime(int n)
+int isSpy(int n)
 {
-    if (n <= 1)
-    {
-        return 0;
+    int sum=0,prod=1,b;
+    while (n!=0)
+    {   
+        b= n%10;
+        sum=sum+b;
+        prod=prod*b;
+        n/=10;
     }
-    int i = 2;
-    int j = sqrt(n);
-    while (i <= j)
+    if (sum==prod)
     {
-        if (n % i == 0)
-        {
-            return 0;
-        }
-        i++;
+        return 1;
     }
-    return 1;
+    return 0;
+    
 }
 
 int main()
 {
-    int a, ans, count = 0, x = 2, temp;
+    int a, ans, count = 0, x = 1, temp;
     scanf("%d", &a);
     while (1)
     {
-        if (isPrime(x) == 1)
+        if (isSpy(x) == 1)
         {
             count++;
+
         }
         if (count == a)
         {

@@ -1,33 +1,33 @@
 #include <stdio.h>
 #include <math.h>
-int isPrime(int n)
-{
-    if (n <= 1)
+int isPalindrome(int n){
+    int a=n,sum=0,b;
+    while (n!=0)
     {
+        b=n%10;
+        sum=(sum*10)+b;
+        n/=10;
+    }
+    if (a==sum)
+    {
+        return 1;
+    }
+    else{
         return 0;
     }
-    int i = 2;
-    int j = sqrt(n);
-    while (i <= j)
-    {
-        if (n % i == 0)
-        {
-            return 0;
-        }
-        i++;
-    }
-    return 1;
+    
 }
 
 int main()
 {
-    int a, ans, count = 0, x = 2, temp;
+    int a, ans, count = 0, x = 1, temp;
     scanf("%d", &a);
     while (1)
     {
-        if (isPrime(x) == 1)
+        if (isPalindrome(x) == 1)
         {
             count++;
+
         }
         if (count == a)
         {

@@ -1,37 +1,36 @@
 #include <stdio.h>
 #include <math.h>
-int isPrime(int n)
-{
-    if (n <= 1)
+int isAutomorphic(int n){
+    int sq =n*n;
+    while (n!=0)
     {
-        return 0;
-    }
-    int i = 2;
-    int j = sqrt(n);
-    while (i <= j)
-    {
-        if (n % i == 0)
+        if (n%10!=sq%10)
         {
             return 0;
         }
-        i++;
+        n=n/10;
+        sq=sq/10;
+        
     }
+    
     return 1;
 }
 
 int main()
 {
-    int a, ans, count = 0, x = 2, temp;
+    int a, ans, count = 0, x = 1, temp;
     scanf("%d", &a);
     while (1)
     {
-        if (isPrime(x) == 1)
+        if (isAutomorphic(x) == 1)
         {
             count++;
+            printf("%d ", x);
+
         }
         if (count == a)
         {
-            printf("%d", x);
+            
             break;
         }
         x++;
