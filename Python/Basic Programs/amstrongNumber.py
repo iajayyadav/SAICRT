@@ -16,3 +16,4 @@ if(sum==a):
     print("Amstrong Number")
 else:
     print("Not Amstrong")
+    

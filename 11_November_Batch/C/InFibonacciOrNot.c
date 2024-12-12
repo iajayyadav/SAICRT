@@ -24,24 +24,17 @@ int isFibonacci(int n){
     
 }
 
-int main()
-{
-    int a, ans, count = 0, x = 1;
-    scanf("%d", &a);
-    while (1)
+int main(){
+    int a,ans;
+    scanf("%d",&a);
+    ans=isFibonacci(a);
+    if (ans==1)
     {
-        if (isFibonacci(x) == 1)
-        {
-            count++;
-
-        }
-        if (count == a)
-        {
-            printf("%d", x);
-            break;
-        }
-        x++;
+        printf("Fibonacci Number");   
     }
-
+    else{
+        printf("Not a Fibonacci Number");
+    }
+    
     return 0;
 }

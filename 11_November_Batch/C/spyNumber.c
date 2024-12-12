@@ -18,23 +18,17 @@ int isSpy(int n)
     
 }
 
-int main()
-{
-    int a, ans, count = 0, x = 1;
-    scanf("%d", &a);
-    while (1)
+int main(){
+    int a,ans;
+    scanf("%d",&a);
+    ans=isSpy(a);
+    if (ans==1)
     {
-        if (isSpy(x) == 1)
-        {
-            count++;
-
-        }
-        if (count == a)
-        {
-            printf("%d", x);
-            break;
-        }
-        x++;
+        printf("Spy Number");   
     }
+    else{
+        printf("Not Spy Number");
+    }
+    
     return 0;
 }

@@ -16,7 +16,7 @@ int isSunny(int n)
 
 int main()
 {
-    int a, ans, count = 0, x = 1, temp;
+    int a, ans, count = 0, x = 1;
     scanf("%d", &a);
     while (1)
     {

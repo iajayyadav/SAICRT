@@ -2,7 +2,8 @@
 #include <math.h>
 int isAmstrong(int n)
 {
-    int count =0,sum=0,a=n,b;
+    int count =0,a=n,b;
+    float sum=0;
     while (n!=0)
     {
         count++;
